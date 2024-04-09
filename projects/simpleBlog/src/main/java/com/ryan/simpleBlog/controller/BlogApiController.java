@@ -41,11 +41,8 @@ public class BlogApiController {
     }
 
     @GetMapping("/api/articles/{id}")
-    // URL 경로에서 값 추출
-    // @Pathvariable로 id를 url로부터 추출한다.
-    public ResponseEntity<ArticleResponse> findArticle(@PathVariable long id) {
+    public ResponseEntity<ArticleResponse> findArticle(@PathVariable(value = "id") long id) {
         Article article = blogService.findById(id);
-
         return ResponseEntity.ok()
                 .body(new ArticleResponse(article));
     }

@@ -85,7 +85,7 @@ class BlogApiControllerTest {
         Assertions.assertThat(articles.get(0).getContent()).isEqualTo(content);
     }
 
-    @DisplayName("findAdllArticles: 블로그 글 목록 조회에 성공한다.")
+    @DisplayName("findAllArticles: 블로그 글 목록 조회에 성공한다.")
     @Test
     public void findAllArticles() throws Exception {
         // given
