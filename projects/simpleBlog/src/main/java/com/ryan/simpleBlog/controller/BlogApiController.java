@@ -4,6 +4,7 @@ package com.ryan.simpleBlog.controller;
 import com.ryan.simpleBlog.domain.Article;
 import com.ryan.simpleBlog.dto.AddArticleRequest;
 import com.ryan.simpleBlog.dto.ArticleResponse;
+import com.ryan.simpleBlog.dto.UpdateArticleRequest;
 import com.ryan.simpleBlog.service.BlogService;
 import lombok.RequiredArgsConstructor;
 import org.apache.coyote.Response;
@@ -52,5 +53,14 @@ public class BlogApiController {
         blogService.delete(id);
         return ResponseEntity.ok()
                 .build();
+    }
+
+    @PutMapping("/api/articles/{id}")
+    public ResponseEntity<Article> updateArticle(@PathVariable(value = "id") long id,
+                                                 @RequestBody UpdateArticleRequest request) {
+        Article updatedArticle = blogService.update(id, request);
+
+        return ResponseEntity.ok()
+                .body(updatedArticle);
     }
 }

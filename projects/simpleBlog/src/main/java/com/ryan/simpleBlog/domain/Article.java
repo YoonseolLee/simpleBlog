@@ -31,4 +31,12 @@ public class Article {
         this.title = title;
         this.content = content;
     }
+
+    /**
+     * 수정하는 메소드
+     */
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
