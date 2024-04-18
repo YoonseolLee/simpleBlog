@@ -30,11 +30,11 @@ public class User implements UserDetails {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "nickname", unique = true)
-    private String nickname;
-
     @Column(name = "password")
     private String password;
+
+    @Column(name = "nickname", unique = true)
+    private String nickname;
 
     @Builder
     public User(String email, String password, String nickname) {
