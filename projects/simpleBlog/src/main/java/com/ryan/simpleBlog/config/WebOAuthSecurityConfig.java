@@ -2,6 +2,7 @@ package com.ryan.simpleBlog.config;
 
 import com.ryan.simpleBlog.config.jwt.TokenProvider;
 import com.ryan.simpleBlog.config.oauth.OAuth2AuthorizationRequestBasedOnCookieRepository;
+import com.ryan.simpleBlog.config.oauth.OAuth2SuccessHandler;
 import com.ryan.simpleBlog.config.oauth.OAuth2UserCustomService;
 import com.ryan.simpleBlog.repository.RefreshTokenRepository;
 import com.ryan.simpleBlog.service.UserService;
